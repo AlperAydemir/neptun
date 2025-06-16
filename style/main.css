@@ -1,0 +1,442 @@
+/* main.css */
+
+/* Genel Ayarlar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0a0e2a;
+    color: white;
+  }
+  
+  /* Dil seçici */
+  .language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+  }
+  .language-switcher button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .language-switcher button:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Hero */
+  .hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(0.5);
+  }
+  
+  .hero-content {
+    z-index: 1;
+    color: white;
+    padding: 20px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 140px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+  
+  h1 {
+    font-size: 3em;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #00c9a7, #007f6f);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 201, 167, 0.4);
+    transform: translateX(0);
+  }
+  
+  .buttons .btn:hover {
+    background: linear-gradient(135deg, #00a890, #005f50);
+    box-shadow: 0 6px 18px rgba(0, 201, 167, 0.6);
+    transform: translateX(4px);
+  }
+  
+  .buttons .btn::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    p {
+      font-size: 1em;
+    }
+  
+    .logo {
+      width: 100px;
+    }
+  
+    .buttons .btn {
+      padding: 10px 20px;
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Takım Bölümü */
+  .team {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #0f122f;
+  }
+  
+  .team h2 {
+    font-size: 2.4em;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .member {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .member:nth-child(2) {
+    transform: translateY(-20px);
+  }
+  
+  .member:hover {
+    transform: scale(1.05);
+  }
+  
+  .member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .member-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 20px 10px 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .member:hover .member-info {
+    opacity: 1;
+  }
+  
+  .member-info h3 {
+    margin: 0;
+    font-size: 1.4em;
+  }
+  
+  .member-info p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .team-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .member {
+      width: 200px;
+      height: 200px;
+    }
+  }
+/* Video */
+/* Promo Video */
+.video-container {
+    width: 90%;
+    max-width: 720px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #000;
+}
+  .promo-heading {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(to right, #00c9a7, #007f6f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 12px rgba(0, 201, 167, 0.4);
+    animation: fadeInDrop 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInDrop {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    background-color: rgba(10, 14, 42, 0.7);
+    padding: 12px 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .header-logo {
+    height: 40px;
+    border-radius: 8px;
+  }
+  
+  .header-nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .header-nav a:hover {
+    color: #00c9a7;
+  }
+  
+  .header-right button {
+    background: none;
+    border: 1px solid #00c9a7;
+    color: white;
+    margin-left: 10px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .header-right button:hover {
+    background: #00c9a7;
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .header-nav {
+      display: none;
+    }
+  }
+  section {
+    scroll-margin-top: 100px; /* header yüksekliği kadar */
+  }
+.system{
+    margin-left: 5%;
+
+}
+
+.system-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+
+  .card {
+    position: relative;
+    width: 22%;
+    aspect-ratio: 1 / 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: rgba(10,14,42,0.9);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.17;
+    transition: opacity 0.5s ease; /* Arka plan geçiş efekti */
+    z-index: 0;
+  }
+  
+  .card h3, .card p {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Hover durumunda */
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 201, 167, 0.3);
+  }
+  
+  .card:hover::before {
+    opacity: 0.4; /* Görsel daha belirginleşir */
+  }
+  
+  .card:hover h3,
+  .card:hover p {
+    opacity: 0; /* Yazılar kaybolur */
+  }
+  
+  /* Arka plan görselleri */
+  .card-mechanical::before {
+    background-image: url('../img/mechanical.png');
+  }
+  
+  .card-electronic::before {
+    background-image: url('../img/electronic.png');
+  }
+  
+  .card-software::before {
+    background-image: url('../img/software.png');
+  }
+  
+  .card-waterproof::before {
+    background-image: url('../img/waterproof.png');
+  }
+  
+  /* Mobil görünüm */
+  @media (max-width: 1024px) {
+    .card {
+      width: 40%;
+    }
+  }
+  @media (max-width: 600px) {
+    .card {
+      width: 80%;
+    }
+  }
+  
+
+  .contact {
+    padding: 80px 20px;
+    background-color: #0f122f;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .form-container {
+    position: relative;
+    padding-bottom: 65%; /* Oran: yaklaşık 4:3 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
+  }
+  
+  .form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
