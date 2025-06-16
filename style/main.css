@@ -407,32 +407,35 @@ body, html {
   }
   
 
-.contact {
-  padding: 80px 20px;
-  background-color: #0f122f;
-  color: white;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.4em;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-.form-container {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  overflow-x: auto;
-  padding: 0 10px; /* Optional: provides a little side space on small screens */
-}
-
-.form-container iframe {
-  width: 100%;
-  min-width: 320px;   /* Prevents getting too narrow on mobile */
-  max-width: 700px;   /* Matches the container's max-width */
-  height: 1077px;     /* Or whatever you need for your form's length */
-  border: 0;
-  display: block;
-}
+  .contact {
+    padding: 80px 20px;
+    background-color: #0f122f;
+    color: white;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  .form-container {
+    position: relative;
+    padding-bottom: 65%; /* Oran: yaklaşık 4:3 */
+    height: 0;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
+  }
+  
+  .form-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
