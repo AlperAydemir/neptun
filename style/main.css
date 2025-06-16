@@ -408,10 +408,13 @@ body, html {
   
 
   .contact {
-    padding: 80px 20px;
+    
     background-color: #0f122f;
     color: white;
     text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    
   }
   
   .contact h2 {
