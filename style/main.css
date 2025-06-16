@@ -420,17 +420,16 @@ body, html {
     font-weight: 700;
   }
   
-  .form-container {
-    position: relative;
-    padding-bottom: 65%; /* Oran: yaklaşık 4:3 */
-    height: 0;
-    overflow: hidden;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
-  }
-  
+.form-container {
+  position: relative;
+  height: 480px; /* Adjust this value as needed */
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
+  background: #151735;
+  overflow: hidden;
+}
   .form-container iframe {
     position: absolute;
     top: 0;
