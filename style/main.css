@@ -422,20 +422,19 @@ body, html {
   
 .form-container {
   position: relative;
-  height: 480px; /* Adjust this value as needed */
+  width: 100%;
   max-width: 600px;
+  min-height: 400px;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 201, 167, 0.3);
   background: #151735;
   overflow: hidden;
 }
-  .form-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
+.form-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
   
